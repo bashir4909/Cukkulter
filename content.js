@@ -19,17 +19,16 @@ function dothething(){
     {
       twb.innerText = "Cükküldəş"
     }}
-    rtb = document.querySelector("div[data-testid='retweet']")
-    if (rtb) {
-      document.querySelector("div[data-testid='retweet']").onclick = () => {
+
+    document.querySelectorAll("div[data-testid='retweet']").forEach((rtb)=>{
+      rtb.onclick = () => {
         setTimeout(()=>{
           rtC = document.querySelector("div[data-testid='retweetConfirm']")
           rtC.querySelector("span").innerText = "Cükküldət"
           rtC.parentElement.querySelector("a span").innerText = "Linçlə"
         },100)
       }  
-    }
-    
+    })
   }
 
 window.addEventListener('load',()=>{
